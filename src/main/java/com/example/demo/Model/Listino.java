@@ -14,7 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+//nuovo ciao
 @Entity
 @Table(name = "Listini")
 public class Listino implements Serializable {
