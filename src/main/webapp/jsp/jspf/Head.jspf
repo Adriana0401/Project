@@ -1,0 +1,99 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<meta charset="ISO-8859-1">
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<meta charset="ISO-8859-1">
+</head>
+<body>
+	<!-- Preloader -->
+	<div class="preloader d-flex align-items-center justify-content-center">
+		<div class="lds-ellipsis">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<!-- ##### Header Area Start ##### -->
+	<header class="header-area">
+		<!-- Navbar Area -->
+		<div class="oneMusic-main-menu">
+			<div class="classy-nav-container breakpoint-off">
+				<div class="container">
+					<!-- Menu -->
+					<nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+						<!-- Nav brand -->
+						<a href="" class="nav-brand"><img
+							src="img/core-img/michael-jackson-logo-5.png" alt=""></a>
+
+						<!-- Navbar Toggler -->
+						<div class="classy-navbar-toggler">
+							<span class="navbarToggler"><span></span><span></span><span></span></span>
+						</div>
+
+						<!-- Menu -->
+						<div class="classy-menu">
+
+							<!-- Close Button -->
+							<div class="classycloseIcon">
+								<div class="cross-wrap">
+									<span class="top"></span><span class="bottom"></span>
+								</div>
+							</div>
+
+							<!-- Nav Start -->
+							<div class="classynav">
+								<ul>
+									<li><a href="artista">Artista</a></li>
+									<li><a href="home">Home</a></li>
+									<li><a href="prodotti">Albums</a></li>
+									<li><a href="news">News</a></li>
+
+								</ul>
+
+								<!-- Login/Register & Cart Button -->
+								<div
+									class="login-register-cart-button d-flex align-items-center">
+									<!-- Login/Register -->
+									<c:choose>
+										<c:when test="${(sessionScope.utente)!=null}">
+											<div style="color: white">${sessionScope.utente.nome}</div>
+											<a href="logout"><button type="button"
+													class="btn btn-outline-light" style="padding: 0px">Logout</button></a>
+										</c:when>
+										<c:otherwise>
+											<div class="login-register-btn mr-50">
+												<a href="login" id="loginBtn">Login</a>
+											</div>
+											<div class="login-register-btn mr-50">
+												<a href="registrazione" id="loginBtn">Registrazione</a>
+											</div>
+										</c:otherwise>
+									</c:choose>
+
+									<a href="carrelloacquisti"><img
+										src="img/core-img/shopping-cart-3_icon-icons.com_63429.png"
+										width="30" height="30"></img></a>
+								</div>
+							</div>
+						</div>
+						<!-- Nav End -->
+				</div>
+				</nav>
+			</div>
+		</div>
+		</div>
+	</header>
+	<!-- ##### Header Area End ##### -->
+</body>
+</html>
