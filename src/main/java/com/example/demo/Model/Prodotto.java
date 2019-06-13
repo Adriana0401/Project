@@ -17,7 +17,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+//ciao
 @Entity
 @Table(name = "Prodotti")
 public class Prodotto implements Serializable {
